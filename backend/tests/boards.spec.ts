@@ -9,8 +9,9 @@ describe('Boards routes', () => {
             .get('/boards')
             .expect('Content-Type', /json/)
             .expect(200)
-            .end(function(err: any, res: any) {
-                if (err) throw err
+            .expect((res) => {
+                console.log(res.body)
+                expect(res.body).toHaveLength(1)
             })
     })
 })
