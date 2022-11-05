@@ -1,13 +1,13 @@
 import Koa from 'koa'
 import Router from 'koa-router'
-import json from 'koa-json'
+import BodyParser from 'koa-bodyparser'
 
 import boardsRouter from './modules/boards/boards.routes'
 
 const app = new Koa()
 
 // middlewares
-app.use(json())
+app.use(BodyParser())
 
 // routes
 const baseRouter = new Router()
