@@ -1,5 +1,9 @@
 import { Model } from 'objection'
 
-class Board extends Model {
+export class Board extends Model {
+  id!: string
+  name!: string
+  description!: string
+
   static tableName = 'boards'
 }

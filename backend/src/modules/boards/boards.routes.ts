@@ -1,15 +1,11 @@
 import Router from "koa-router";
+import { Board } from "./board.model";
 
 const router = new Router()
 
-// testing!
-type Board = {
-  id: number;
-  name: string;
-}
-
-router.get('/', (ctx, next) => {
-  ctx.body = <Board[]>[{ id: 1, name: 'My Kanban Board' }]
+router.get('/', async (ctx, next) => {
+  const boards = await Board.query()
+  ctx.body = boards
 })
 
 export default router

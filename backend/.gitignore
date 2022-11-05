@@ -1,4 +1,6 @@
 build/
+*.sqlite3
+*.db
 
 # Logs
 logs

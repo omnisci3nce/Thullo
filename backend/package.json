@@ -4,6 +4,7 @@
   "description": "Thullo Backend",
   "main": "index.js",
   "scripts": {
+    "db:dev": "knex migrate:latest && knex seed:run",
     "start:dev": "tsc && node build/server.js",
     "start:prod": "",
     "build": "",
@@ -29,9 +30,11 @@
   },
   "dependencies": {
     "http-status-codes": "^2.2.0",
+    "knex": "^2.3.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^12.0.0",
-    "objection": "^3.0.1"
+    "objection": "^3.0.1",
+    "sqlite3": "^5.1.2"
   }
 }
