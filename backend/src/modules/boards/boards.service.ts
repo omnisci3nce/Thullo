@@ -1,8 +1,8 @@
 import { Board } from "./board.model";
 import { List } from "../lists/list.model";
 
-export async function getAll() {
-    const boards = Board.query()
+export async function getAll(withLists=false) {
+    const boards = Board.query().withGraphFetched('lists')
     return boards
 }
 

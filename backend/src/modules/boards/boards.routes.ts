@@ -4,7 +4,7 @@ import { getAll, getById } from "./boards.service";
 const router = new Router()
 
 router.get('/', async (ctx, next) => {
-  const boards = await getAll()
+  const boards = await getAll(true)
   ctx.body = boards
 })
 

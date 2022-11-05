@@ -1,6 +1,7 @@
 import Koa from 'koa'
 import Router from 'koa-router'
 import BodyParser from 'koa-bodyparser'
+import cors from '@koa/cors'
 import boardsRouter from './modules/boards/boards.routes'
 import listsRouter from './modules/lists/lists.routes'
 import Knex from 'knex'
@@ -13,6 +14,7 @@ Model.knex(knex)
 const app = new Koa()
 
 // middlewares
+app.use(cors())
 app.use(BodyParser())
 
 // routes
