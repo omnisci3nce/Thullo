@@ -1,5 +1,5 @@
 import Router from "koa-router";
-import { getAll, getById, getListsByBoardId } from "./boards.service";
+import { getAll, getById } from "./boards.service";
 
 const router = new Router()
 
@@ -13,9 +13,9 @@ router.get('/:id', async (ctx) => {
   ctx.body = board
 })
 
-router.get('/:id/lists', async (ctx) => {
-  const lists = await getListsByBoardId(ctx.params['id'])
-  ctx.body = lists
-})
+// router.get('/:id/lists', async (ctx) => {
+//   const lists = await getListsByBoardId(ctx.params['id'])
+//   ctx.body = lists
+// })
 
 export default router

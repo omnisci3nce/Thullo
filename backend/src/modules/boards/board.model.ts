@@ -1,19 +1,5 @@
-import { Model, RelationMappings, RelationMappingsThunk } from 'objection'
-
-export class List extends Model {
-  static tableName = 'lists'
-
-  static relationMappings = () => ({
-    board: {
-      relation: Model.BelongsToOneRelation,
-      modelClass: Board,
-      join: {
-        from: 'lists.board_id',
-        to: 'boards.id'
-      }
-    }
-  })
-}
+import { Model } from 'objection'
+import { List } from '../lists/list.model'
 
 export class Board extends Model {
   id!: string

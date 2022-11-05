@@ -25,7 +25,13 @@ const demoBoard1Lists = [{
 
 ]
 
+const demoBoard1Cards = [
+  { }
+]
+
 exports.demoBoards = demoBoards
+exports.demoBoard1Lists = demoBoard1Lists
+exports.demoBoard1Cards = demoBoard1Cards
 
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
@@ -34,4 +40,7 @@ exports.seed = async function (knex) {
 
   await knex('lists').del()
   await knex('lists').insert(demoBoard1Lists)
+
+  await knex('cards').del()
+  await knex('cards').insert(demoBoard1Cards)
 };

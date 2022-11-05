@@ -1,4 +1,5 @@
-import { Board, List } from "./board.model";
+import { Board } from "./board.model";
+import { List } from "../lists/list.model";
 
 export async function getAll() {
     const boards = Board.query()
