@@ -3,8 +3,8 @@ import Router from 'koa-router'
 import BodyParser from 'koa-bodyparser'
 import boardsRouter from './modules/boards/boards.routes'
 import Knex from 'knex'
-import knexConfig from '../knexfile.js'
 import { Model } from 'objection'
+const knexConfig = require('../knexfile')
 
 const knex = Knex(knexConfig.development)
 Model.knex(knex)
