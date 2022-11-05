@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Thullo Backend",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsc && node build/server.js",
+    "start:prod": "",
+    "build": "",
+    "clean": "",
+    "test": "",
+    "lint": "",
+    "format": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "@types/koa-json": "^2.0.20",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^18.11.9",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-json": "^2.0.2",
+    "koa-router": "^12.0.0"
+  }
+}
